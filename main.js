@@ -10,20 +10,20 @@ registerForm.onsubmit = function(e){
     };
     amounts.push(amount)
     if(amount.exchange == "dollar"){
-        amount.amountss*=3.7;
+        amount.amountss/=3.7;
     } 
     else if(amount.exchange == "nis") {
-        amount.amountss*=1;
+        amount.amountss/=1;
 
     }
     else if(amount.exchange == "dinar") {
-        amount.amountss*=5;
+        amount.amountss/=5;
 
     }
     printData();
     function printData(){
         var data="";
-        data+=` amount = ${amount.amountss} `
+        data+=`${amount.amountss} `
         para.innerHTML=data;
     }
     }
